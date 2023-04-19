@@ -1,0 +1,38 @@
+/* CustomImage.module.css */
+
+/* Small size */
+.Image--small {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Big size */
+.Image--big {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .Image--small {
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .Image--big {
+        width: 200px;
+        height: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Remove image border and padding */
+.Image {
+    display: block;
+    border: none;
+    padding: 0;
+    margin: 0;
+}

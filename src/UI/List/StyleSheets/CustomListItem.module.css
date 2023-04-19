@@ -1,0 +1,25 @@
+/* CustomListItem.module.css */
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eaeaea;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.list-item:hover {
+    background-color: #f9f9f9;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.list-item-icon {
+    margin-right: 0.5rem;
+}
+
+.list-item-text {
+    flex: 1;
+}

@@ -1,0 +1,25 @@
+@import url(../../Fonts/YekanBakh/css/fontiran.css);
+.headerLabel {
+    font-family: YekanBakh;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.alertLabel {
+    font-family: YekanBakh;
+    font-size: 0.9rem;
+    color: #f44336;
+    margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .headerLabel {
+        font-size: 1.5rem;
+    }
+
+    .alertLabel {
+        font-size: 1rem;
+    }
+}
