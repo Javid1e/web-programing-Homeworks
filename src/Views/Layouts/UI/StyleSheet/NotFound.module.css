@@ -1,3 +1,5 @@
+@import url(../Fonts/YekanBakh/css/fontiran.css);
+@import url(../Fonts/IranSans/css/fontiran.css);
 .not-found-container {
     display: flex;
     flex-direction: column;
@@ -8,16 +10,22 @@
 }
 
 .not-found-heading {
+    font-family: YekanBakh, serif;
+    font-weight: bold;
     font-size: 6rem;
     color: #f44336;
     margin-bottom: 0;
 }
 
 .not-found-text {
+    font-family: YekanBakh, serif;
+    font-weight: bold;
     font-size: 1.5rem;
     color: #777;
 }
 .not-found-description {
+    font-family: IranSans, serif;
+    font-weight: bold;
     direction: rtl;
     font-size: 1.5rem;
     color: #777;
