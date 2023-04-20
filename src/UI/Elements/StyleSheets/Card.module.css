@@ -1,9 +1,17 @@
 .defaultCard{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 10px;
     background: #ebebeb;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
 }
 .childCard{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 5px;
     background: #f8f8f8;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 10px;

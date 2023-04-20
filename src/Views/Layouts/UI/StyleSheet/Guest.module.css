@@ -1,0 +1,59 @@
+.guestHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 700px;
+    height: 120px;
+}
+.guestContainer{
+    position: absolute;
+    margin: auto;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.guestChildCard{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.guestButton{
+    font-weight: bold;
+    font-size: 50px;
+    height: 100px;
+
+}
+.guestPHeader{
+    font-weight: bold;
+    font-size: 40px;
+}
+.guestP{
+    font-weight: bold;
+    font-size: 25px;
+}
+@media (max-width: 760px) {
+    .guestContainer{
+        width: auto;
+        height: 400px;
+    }
+    .guestHeader{
+        width: auto;
+        height: auto;
+    }
+    .guestChildCard{
+        width: auto;
+        height: auto;
+    }
+}
