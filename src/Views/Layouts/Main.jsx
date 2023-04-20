@@ -1,12 +1,10 @@
 import React from "react";
 import {Outlet} from "react-router-dom";
-import GetRandomPoem from "../../Services/api/GetRandomPoem";
+import GetDetailsOfQuestions from "../../Services/api/GetDetailsOfQuestions";
+
+
 
 const Main = () => {
-    GetRandomPoem()
-        .then((res) => {
-            console.log(res)
-        });
     return (
         <div>
             main
