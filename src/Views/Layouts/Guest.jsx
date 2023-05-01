@@ -30,6 +30,7 @@ const Guest = () => {
       try {
         await GetHomeWorksDetails().then((item) => {
           if (typeof item === "string") {
+            setErrorLoading(item);
           } else {
             setData(item);
           }
@@ -37,7 +38,7 @@ const Guest = () => {
       } catch (e) {
         console.log(e);
         setLoading(false);
-        setErrorLoading(e);
+        setErrorLoading((prevValue) => [prevValue, e]);
       }
     };
     fetchData().then(() => {
@@ -90,7 +91,7 @@ const Guest = () => {
                 className={styleSheet.guestChildCard}
                 children={
                   <GuestButton
-                    to={`${"/homeworks/homework"}${item.id}`}
+                    to={`/homeworks/homework${item.id}`}
                     children={item.title}
                   />
                 }

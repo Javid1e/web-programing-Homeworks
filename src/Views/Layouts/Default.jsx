@@ -30,6 +30,7 @@ const Default = (props) => {
           setError(details);
         } else {
           setDetail(details);
+          console.log(details);
         }
         if (typeof fetchedQuestions === "string") {
           setErrorLoading(true);
