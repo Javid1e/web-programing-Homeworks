@@ -3,7 +3,7 @@ import AnswerMain from "../../Layouts/AnswerMain";
 import Answer5H1 from "../../../Components/HomeWorks/HomeWork1/Answer5/Answer5H1";
 import LoadingComponent from "../../../UI/Elements/LoadingComponent";
 import { GetHomeWorkQuestions } from "../../../Services/APIs/Details/GetHomeWorkQuestions";
-import GetDetailsOfQuestions from "../../../Services/APIs/GetDetailsOfQuestions";
+import { GetQuestionExplains } from "../../../Services/APIs/Details/GetQuestionExplains";
 
 class H1Q5 extends React.Component {
   constructor(props) {
@@ -25,9 +25,10 @@ class H1Q5 extends React.Component {
       setIsFinished: false,
     });
     const fetchData = async () => {
+      const { hId, aId } = this.props;
       const data = await GetHomeWorkQuestions(hId);
       this.setState({ questions: data });
-      const details = await GetDetailsOfQuestions(hId * 10 + aId);
+      const details = await GetQuestionExplains(hId, aId);
       this.setState({ details: details.question5 });
       this.setState({ question: questions[0] });
     };

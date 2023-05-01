@@ -1,30 +1,16 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import CustomButton from "../../../../UI/Elements/CustomButton";
 import Card from "../../../../UI/Elements/Card";
 import styles from "./Answer1.module.css";
 import Poem from "./Poem";
-import GetRandomPoem from "../../../../Services/APIs/GetRandomPoem";
-import GetDetailsOfQuestions from "../../../../Services/APIs/GetDetailsOfQuestions";
+import GetRandomPoem from "../../../../Services/APIs/Responses/GetRandomPoem";
 // This component renders a button that when clicked, fetches a random poem from the server and displays it
 const Answer1H1 = () => {
   const [fal, setFal] = useState("");
-  const [description, setDescription] = useState("");
-  const [title, setTitle] = useState("");
   const [showFal, setShowFal] = useState(false);
   const [error, setError] = useState("");
   const [showError, setShowError] = useState(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const details = await GetDetailsOfQuestions(11);
-        setTitle(details[0].title);
-        setDescription(details[0].description);
-        console.log(title);
-      } catch (error) {}
-    };
-    fetchData().then((r) => {});
-  }, [description]);
   // Fetches a random poem from the server
   const randomFal = () => {
     GetRandomPoem()

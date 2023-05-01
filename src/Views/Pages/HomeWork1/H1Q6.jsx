@@ -2,8 +2,8 @@ import React from "react";
 import { GetHomeWorkQuestions } from "../../../Services/APIs/Details/GetHomeWorkQuestions";
 import AnswerMain from "../../Layouts/AnswerMain";
 import Answer6H1 from "../../../Components/HomeWorks/HomeWork1/Answer6/Answer6H1";
-import GetDetailsOfQuestions from "../../../Services/APIs/GetDetailsOfQuestions";
 import LoadingComponent from "../../../UI/Elements/LoadingComponent";
+import { GetQuestionExplains } from "../../../Services/APIs/Details/GetQuestionExplains";
 
 class H1Q6 extends React.Component {
   constructor(props) {
@@ -37,7 +37,7 @@ class H1Q6 extends React.Component {
     const { hId, aId } = this.props;
     const data = await GetHomeWorkQuestions(hId);
     this.setState({ questions: data });
-    const details = await GetDetailsOfQuestions(hId * 10 + aId);
+    const details = await GetQuestionExplains(hId, aId);
     this.setState({ details: details.question6 });
   };
 

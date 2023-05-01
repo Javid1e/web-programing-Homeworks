@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import AnswerMain from "../../Layouts/AnswerMain";
 import { GetHomeWorkQuestions } from "../../../Services/APIs/Details/GetHomeWorkQuestions";
-import GetDetailsOfQuestions from "../../../Services/APIs/GetDetailsOfQuestions";
 import LoadingComponent from "../../../UI/Elements/LoadingComponent";
 import Answer3H2 from "../../../Components/HomeWorks/HomeWork2/Answer3/Answer3H2";
+import { GetQuestionExplains } from "../../../Services/APIs/Details/GetQuestionExplains";
 
 class H2Q3 extends Component {
   constructor(props) {
@@ -23,10 +23,10 @@ class H2Q3 extends Component {
   }
 
   async fetchData() {
-    const { props } = this;
+    const { hId, aId } = this.props;
     this.setState({ isDataAvailable: false, isFinished: false });
-    const data = await GetHomeWorkQuestions(props.hId);
-    const details = await GetDetailsOfQuestions(props.hId * 10 + props.aId);
+    const data = await GetHomeWorkQuestions(hId);
+    const details = await GetQuestionExplains(hId, aId);
     this.setState({
       questions: data,
       details: details.question1,

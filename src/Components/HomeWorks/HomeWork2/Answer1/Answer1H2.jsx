@@ -1,5 +1,5 @@
 import React from "react";
-import GetH2A1Tests from "../../../../Services/APIs/GetH2A1Tests";
+import GetH2A1Tests from "../../../../Services/APIs/Responses/GetH2A1Tests";
 import CustomButton from "../../../../UI/Elements/CustomButton";
 import Card from "../../../../UI/Elements/Card";
 import styles from "../../HomeWork1/Answer4/Answer4.module.css";

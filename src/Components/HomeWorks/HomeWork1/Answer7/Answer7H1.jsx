@@ -5,7 +5,7 @@ import styles from "./Answer7.module.css";
 import Profiles from "./Profiles";
 import Posts from "./Posts";
 import Comments from "./Comments";
-import GetH1A7Posts from "../../../../Services/APIs/GetH1A7Posts";
+import GetH1A7Posts from "../../../../Services/APIs/Responses/GetH1A7Posts";
 
 const Answer7H1 = (props) => {
   const [selectedProfile, setSelectedProfile] = useState(1);

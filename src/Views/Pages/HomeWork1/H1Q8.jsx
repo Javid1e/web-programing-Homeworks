@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { GetHomeWorkQuestions } from "../../../Services/APIs/Details/GetHomeWorkQuestions";
 import AnswerMain from "../../Layouts/AnswerMain";
 import Answer8H1 from "../../../Components/HomeWorks/HomeWork1/Answer8/Answer8H1";
-import GetDetailsOfQuestions from "../../../Services/APIs/GetDetailsOfQuestions";
 import LoadingComponent from "../../../UI/Elements/LoadingComponent";
+import { GetQuestionExplains } from "../../../Services/APIs/Details/GetQuestionExplains";
 
 class H1Q8 extends Component {
   constructor(props) {
@@ -18,11 +18,10 @@ class H1Q8 extends Component {
   }
 
   fetchData = async () => {
-    const data = await GetHomeWorkQuestions(this.props.hId);
+    const { hId, aId } = this.props;
+    const data = await GetHomeWorkQuestions(hId);
     this.setState({ questions: data });
-    const details = await GetDetailsOfQuestions(
-      this.props.hId * 10 + this.props.aId
-    );
+    const details = await GetQuestionExplains(hId, aId);
     this.setState({ details: details.question8 });
   };
 

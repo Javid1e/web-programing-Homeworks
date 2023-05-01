@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Profiles.module.css";
-import GetH1A7Posts from "../../../../Services/APIs/GetH1A7Posts";
+import GetH1A7Posts from "../../../../Services/APIs/Responses/GetH1A7Posts";
 
 function Profiles({ author }) {
   const authorImage = `https://picsum.photos/200/200?random=${author}`;
