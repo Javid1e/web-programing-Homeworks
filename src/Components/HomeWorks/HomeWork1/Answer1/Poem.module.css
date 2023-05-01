@@ -1,0 +1,12 @@
+@import url(../../../../UI/Fonts/IranSans/css/fontiran.css);
+@import url(../../../../UI/Fonts/YekanBakh/css/fontiran.css);
+.a1h1{
+    font-family: YekanBakh, serif;
+    font-weight: bold;
+    color: #4feb1f;
+}
+.a1p{
+    font-family: IranSans, serif;
+    font-weight: bold;
+    color: #1c1fe9;
+}

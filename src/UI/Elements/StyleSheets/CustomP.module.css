@@ -1,17 +1,19 @@
 @import url(../../Fonts/YekanBakh/css/fontiran.css);
 @import url(../../Fonts/IranSans/css/fontiran.css);
-.message{
+
+.message {
     font-family: IranSans, serif;
     font-weight: bold;
-    color: maroon;
+    color: #1c1fe9;
     width: auto;
     height: auto;
-    text-align: center;
 }
-.alert{
+
+.alert {
     font-family: YekanBakh, serif;
     font-weight: bold;
-    color: #1c1fe9;
+
+    color: maroon;
     width: auto;
     height: auto;
     text-align: center;

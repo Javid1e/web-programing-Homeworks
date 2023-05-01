@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import CustomOption from "./CustomOption";
 import styleSheet from "./StyleSheets/CustomSelect.module.css";
+import CustomLabel from "./CustomLabel";
+
 class CustomSelect extends React.Component {
     constructor(props) {
         super(props);
@@ -11,31 +13,39 @@ class CustomSelect extends React.Component {
     }
 
     componentDidMount() {
-        console.log("CustomSelect component mounted.");
-        this.setState({ isMounted: true });
+
+        this.setState({isMounted: true});
     }
 
     componentWillUnmount() {
-        console.log("CustomSelect component will unmount.");
     }
 
     render() {
-        const { className, children, options, ...props } = this.props;
-        const combinedClassName = `${ styleSheet["select"]} ${className}`;
+        const {id, className, children, label, error, options, ...props} = this.props;
+        const combinedClassName = `${styleSheet["select"]} ${className}`;
         return (
-            <select className={combinedClassName} {...props}>
-                {options.map((option) => (
-                    <CustomOption value={option.value} label={option.label} />
-                ))}
-                {children}
-            </select>
+            <div className={styleSheet.selectContainer}>
+                {label && <CustomLabel htmlFor={id} type={"HeaderLabel"} children={label} isHeader={true}/>}
+                <select id={id} className={combinedClassName} {...props}>
+                    {options.map((option) => (
+                        <CustomOption key={option.id} value={option.value} label={option.label}/>
+                    ))}
+                    {children}
+                </select>
+                {error && <CustomLabel htmlFor={id} type={"AlertLabel"} children={"پر کردن این فیلد الزامی است."}
+                                       isHeader={false}/>}
+            </div>
+
         );
     }
 }
 
 CustomSelect.propTypes = {
+    id: PropTypes.string.isRequired,
     className: PropTypes.string,
     children: PropTypes.node,
+    label: PropTypes.string,
+    error: PropTypes.bool,
     options: PropTypes.arrayOf(
         PropTypes.shape({
             value: PropTypes.string.isRequired,

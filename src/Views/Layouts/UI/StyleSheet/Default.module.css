@@ -1,0 +1,59 @@
+.defaultHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 700px;
+    height: 120px;
+}
+.defaultContainer{
+    position: absolute;
+    margin: auto;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 700px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.defaultChildCard{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.defaultButton{
+    font-weight: bold;
+    font-size: 50px;
+    height: 100px;
+
+}
+.defaultHeader{
+    font-weight: bold;
+    font-size: 40px;
+}
+.defaultP{
+    font-weight: bold;
+    font-size: 25px;
+}
+@media (max-width: 760px) {
+    .defaultContainer{
+        width: auto;
+        height: 400px;
+    }
+    .defaultHeader{
+        width: auto;
+        height: auto;
+    }
+    .defaultChildCard{
+        width: auto;
+        height: auto;
+    }
+}

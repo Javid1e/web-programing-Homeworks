@@ -2,29 +2,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: auto;
-    top: 100px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 700px;
-    height: 120px;
+    padding: 1rem;
+    width: 40rem;
+    max-width: 95%;
+
 }
 .guestContainer{
-    position: absolute;
-    margin: auto;
-    top: 100px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 700px;
-    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 40rem;
+    max-width: 95%;
 }
 .guestChildCard{
-    height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -46,7 +38,7 @@
 @media (max-width: 760px) {
     .guestContainer{
         width: auto;
-        height: 400px;
+        height: auto;
     }
     .guestHeader{
         width: auto;

@@ -1,0 +1,36 @@
+@import url(../../../../UI/Fonts/YekanBakh/css/fontiran.css);
+.a1container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color:whitesmoke;
+    padding: 20px;
+    margin-top: 10px;
+}
+.a1mes{
+    font-family: YekanBakh, serif;
+    font-weight: bold;
+    color: maroon;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.a1fal {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    background-color:whitesmoke;
+    color: #1c1fe9;
+
+}
+
+.a1btn {
+    padding: 20px;
+    font-family: YekanBakh, serif;
+    font-weight: bold;
+    width: auto;
+    border-radius: 10px;
+    text-align: center;
+    color: whitesmoke;
+}

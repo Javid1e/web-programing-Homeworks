@@ -1,0 +1,70 @@
+@import url(../../../../UI/Fonts/YekanBakh/css/fontiran.css);
+@import url(../../../../UI/Fonts/IranSans/css/fontiran.css);
+
+.main {
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+}
+
+.answer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: #4feb1f;
+    flex-direction: column;
+}
+
+.question-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: #1c1fe9;
+    flex-direction: column;
+}
+
+.question-item__description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+    flex-flow: column;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+h1 {
+    font-family: YekanBakh, serif;
+    color: #ffffff;
+    font-size: 2rem;
+    flex: 1;
+    margin: 0 1rem;
+}
+
+h2 {
+    font-family: IranSans, serif;
+    color: #ffffff;
+    font-size: 1rem;
+    flex: 1;
+    margin: 0 1rem;
+}
+
+
+@media (min-width: 580px) {
+    .question-item__description {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1;
+    }
+
+    .question-item__description h2 {
+        font-size: 1.25rem;
+    }
+}

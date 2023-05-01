@@ -1,0 +1,27 @@
+/* Profile.module.css */
+
+.profile {
+    font-family: YekanBakh, serif;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid rgba(5, 5, 229, 0.25);
+    border-radius: 0.5rem;
+}
+
+.profile h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: rgba(5, 5, 229, 0.25);
+}
+
+.profile img {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile p {
+    font-size: 1rem;
+    line-height: 1.5;
+}

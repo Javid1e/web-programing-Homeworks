@@ -2,10 +2,11 @@
 
 .list-item {
     display: flex;
-    align-items: center;
+    align-items: inherit;
     padding: 0.5rem;
     border-bottom: 1px solid #eaeaea;
     transition: background-color 0.2s ease-in-out;
+    text-align: justify;
 }
 
 .list-item:hover {

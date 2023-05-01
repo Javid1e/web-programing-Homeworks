@@ -1,17 +1,23 @@
-import React from 'react';
-import styleSheet from './UI/StyleSheet/NotFound.module.css';
+import React from "react";
+import styles from "./UI/StyleSheet/NotFound.module.css";
 
+/*
+    NotFound component is a functional component that renders a page when the user enters a wrong or non-existent address.
+    It consists of a heading, two paragraphs, and an animation.
+    It is using a stylesheet module for styling.
+*/
 const NotFound = () => {
   return (
-      <div className={styleSheet["not-found-container"]}>
-        <h1 className={styleSheet["not-found-heading"]}>404</h1>
-        <p className={styleSheet["not-found-text"]}>Oops! Page not found.</p>
-          <p className={styleSheet["not-found-description"]}>لطفا آدرس ورودی را بررسی کنید.</p>
-        <div className={styleSheet["not-found-anim-container"]}>
-          <div className={styleSheet["not-found-anim"]}></div>
-        </div>
+    <div className={styles.notFoundContainer}>
+      <h1 className={styles.notFoundHeading}>404</h1>
+      <p className={styles.notFoundText}>"Oops! Page not found"</p>
+      <p className={styles.notFoundDescription}>
+        "لطفا آدرس ورودی را بررسی بفرمایید."
+      </p>
+      <div className={styles.notFoundAnimContainer}>
+        <div className={styles.notFoundAnim}></div>
       </div>
+    </div>
   );
 };
-
 export default NotFound;

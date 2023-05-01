@@ -1,0 +1,78 @@
+@import url(../../../../UI/Fonts/YekanBakh/css/fontiran.css);
+@import url(../../../../UI/Fonts/IranSans/css/fontiran.css);
+
+.a55container {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    align-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.a5input{
+    font-family: YekanBakh, serif;
+    border: solid 1px  whitesmoke !important;
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border-radius: .85rem;
+    background-clip: padding-box;
+    margin: 0;
+    padding: .85rem 1.5rem .7rem 1.5rem;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+
+}
+.a55input{
+    font-family: YekanBakh;
+    border: solid 1px  whitesmoke !important;
+    text-align: center;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border-radius: .85rem;
+    background-clip: padding-box;
+    margin: 0;
+    padding: .85rem 1.5rem .7rem 1.5rem;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+
+}
+.a55input::after {
+    content: "km";
+}
+.a5mes{
+    font-family: YekanBakh;
+    font-weight: bold;
+    color: maroon;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.a5lbl{
+    font-family: YekanBakh;
+    font-weight: bold;
+    color: #1c1fe9;
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+.a5btn {
+    padding: 20px;
+    margin-top: 10px;
+    font-family: YekanBakh;
+    font-weight: bold;
+    width: auto;
+    border-radius: 10px;
+    text-align: center;
+    color: whitesmoke;
+}
+.a5option{
+    font-family: YekanBakh;
+    text-align: center;
+}

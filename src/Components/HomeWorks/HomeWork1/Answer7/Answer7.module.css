@@ -1,0 +1,14 @@
+.a7lbl{
+    font-family: YekanBakh;
+    font-weight: bold;
+    color: #1c1fe9;
+    text-align: center;
+}
+.a7container {
+    display: flex;
+    padding: 10px;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

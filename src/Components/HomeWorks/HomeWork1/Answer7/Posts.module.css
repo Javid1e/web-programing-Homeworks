@@ -1,0 +1,50 @@
+/* Posts.module.css */
+
+.posts {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.posts h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.post {
+    margin-bottom: 1rem;
+}
+
+.post img {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.post-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-author {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.post-date {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom:0.25rem;
+}
+
+.post-description {
+    margin-bottom: 0.5rem;
+}
+
+.post-likes {
+    font-size: 0.8rem;
+    color: #777;
+}
+

@@ -1,0 +1,18 @@
+.customList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+@media (max-width: 970px) {
+    .customList {
+        width: auto;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        width: auto;
+    }
+
+}

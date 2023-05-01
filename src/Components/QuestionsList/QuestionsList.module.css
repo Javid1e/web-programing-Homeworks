@@ -1,0 +1,35 @@
+@import url(../../UI/Fonts/YekanBakh/css/fontiran.css);
+@import url(../../UI/Fonts/YekanBakh/css/fontiran.css);
+
+.questions-list {
+    list-style: none;
+    padding: 0;
+}
+.questions-list_header h1 {
+
+    color: #3a3a3a;
+    font-size: 2rem;
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.questions-list_header h2 {
+    color: #3a3a3a;
+    font-size: 1.5rem;
+    flex: 1;
+    margin: 0 1rem;
+
+}
+
+.questions-list_header h3 {
+    color: #3a3a3a;
+    font-size: 1.4rem;
+    flex: 1;
+    margin: 0 1rem;
+
+}
+
+.questions-list__fallback {
+    color: rgb(248, 0, 0);
+    text-align: center;
+}

@@ -1,0 +1,58 @@
+.customInput {
+    display: flex;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.customInput label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.customInput p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+
+}
+.customInput input {
+    border: 2px solid #ea5caa;
+    color: #1c1fe9;
+    text-align: center;
+    width: 100%;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.customInput input:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(5, 5, 229, 0.25);
+}
+.error {
+    border-color: #ff8080;
+}
+
+.errorMessage {
+    color: #ff8080;
+    font-size: 14px;
+    margin-top: 4px;
+}
+@media screen and (min-width: 576px) {
+    .customInput {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .customInput label {
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+
+    .customInput input {
+        width: 100%;
+    }
+}
