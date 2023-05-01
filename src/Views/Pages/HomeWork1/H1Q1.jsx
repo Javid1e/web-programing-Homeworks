@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AnswerMain from "../../Layouts/AnswerMain";
 import Answer1H1 from "../../../Components/HomeWorks/HomeWork1/Answer1/Answer1H1";
-import { GetHomeWorkQuestions } from "../../../Services/APIs/GetHomeWorkQuestions";
+import { GetHomeWorkQuestions } from "../../../Services/APIs/Details/GetHomeWorkQuestions";
 import GetDetailsOfQuestions from "../../../Services/APIs/GetDetailsOfQuestions";
 import LoadingComponent from "../../../UI/Elements/LoadingComponent";
 

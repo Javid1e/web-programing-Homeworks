@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import GetHomeWorkDetails from "../../Services/APIs/Details/GetHomeWorkDetails";
-import {GetHomeWorkQuestions} from "../../Services/APIs/GetHomeWorkQuestions";
+import {GetHomeWorkQuestions} from "../../Services/APIs/Details/GetHomeWorkQuestions";
 import {Outlet} from "react-router-dom";
 import Header from "./Header";
 import Card from "../../UI/Elements/Card";

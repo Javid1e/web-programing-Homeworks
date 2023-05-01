@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { GetHomeWorkQuestions } from "../../../Services/APIs/GetHomeWorkQuestions";
+import { GetHomeWorkQuestions } from "../../../Services/APIs/Details/GetHomeWorkQuestions";
 import AnswerMain from "../../Layouts/AnswerMain";
 import Answer2H1 from "../../../Components/HomeWorks/HomeWork1/Answer2/Answer2H1";
 import GetDetailsOfQuestions from "../../../Services/APIs/GetDetailsOfQuestions";

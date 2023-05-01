@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "../../UI/Elements/Card";
 import StyleSheet from "./UI/StyleSheet/AnswerMain.module.css";
-import { GetHomeWorkQuestions } from "../../Services/APIs/GetHomeWorkQuestions";
+import { GetHomeWorkQuestions } from "../../Services/APIs/Details/GetHomeWorkQuestions";
 import CustomList from "../../UI/List/CustomList";
 import CustomP from "../../UI/Elements/CustomP";
 import LoadingComponent from "../../UI/Elements/LoadingComponent";

@@ -2,7 +2,7 @@ import React from "react";
 import AnswerMain from "../../Layouts/AnswerMain";
 import Answer5H1 from "../../../Components/HomeWorks/HomeWork1/Answer5/Answer5H1";
 import LoadingComponent from "../../../UI/Elements/LoadingComponent";
-import { GetHomeWorkQuestions } from "../../../Services/APIs/GetHomeWorkQuestions";
+import { GetHomeWorkQuestions } from "../../../Services/APIs/Details/GetHomeWorkQuestions";
 import GetDetailsOfQuestions from "../../../Services/APIs/GetDetailsOfQuestions";
 
 class H1Q5 extends React.Component {

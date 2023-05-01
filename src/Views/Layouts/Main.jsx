@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { GetHomeWorkQuestions } from "../../Services/APIs/GetHomeWorkQuestions";
+import { GetHomeWorkQuestions } from "../../Services/APIs/Details/GetHomeWorkQuestions";
 import Header from "./Header";
 import LoadingComponent from "../../UI/Elements/LoadingComponent";
 import Card from "../../UI/Elements/Card";
