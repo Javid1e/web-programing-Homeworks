@@ -5,7 +5,7 @@ import {
   HOMEWORK_3_QUESTION_URL,
 } from "../PersonalAPIConstants";
 
-export async function GetHomeWorkQuestions(hId, aId) {
+export async function GetHomeWorkQuestion(hId, aId) {
   let url;
   switch (hId) {
     case 1:
@@ -22,7 +22,6 @@ export async function GetHomeWorkQuestions(hId, aId) {
   }
   try {
     const response = await axios.get(`${url}\\${aId}`);
-    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);

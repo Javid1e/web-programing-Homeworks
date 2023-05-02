@@ -22,7 +22,6 @@ export async function GetQuestionExplains(hId, aId) {
   }
   try {
     const response = await axios.get(`${url}\\${aId}`);
-    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);

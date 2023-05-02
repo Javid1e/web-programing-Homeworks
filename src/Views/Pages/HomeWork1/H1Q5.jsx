@@ -2,51 +2,48 @@ import React from "react";
 import AnswerMain from "../../Layouts/AnswerMain";
 import Answer5H1 from "../../../Components/HomeWorks/HomeWork1/Answer5/Answer5H1";
 import LoadingComponent from "../../../UI/Elements/LoadingComponent";
-import { GetHomeWorkQuestions } from "../../../Services/APIs/Details/GetHomeWorkQuestions";
 import { GetQuestionExplains } from "../../../Services/APIs/Details/GetQuestionExplains";
+import { GetHomeWorkQuestion } from "../../../Services/APIs/Details/GetHomeWorkQuestion";
 
 class H1Q5 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isDataAvailable: false,
       isFinished: false,
       question: [],
-      questions: [],
       details: [],
     };
+    this.fetchData = this.fetchData.bind(this);
   }
 
   componentDidMount() {
-    const { questions } = this.state;
-    const { hId, aId } = this.props;
-    this.setState({
-      setIsDataAvailable: false,
-      setIsFinished: false,
+    this.fetchData().then(() => {
+      setTimeout(() => {
+        this.setState({ isFinished: true });
+      }, 1000);
     });
-    const fetchData = async () => {
-      const { hId, aId } = this.props;
-      const data = await GetHomeWorkQuestions(hId);
-      this.setState({ questions: data });
-      const details = await GetQuestionExplains(hId, aId);
-      this.setState({ details: details.question5 });
-      this.setState({ question: questions[0] });
-    };
-    fetchData();
+  }
+
+  async fetchData() {
+    const { hId, aId } = this.props;
+    this.setState({ isFinished: false });
+    const data = await GetHomeWorkQuestion(hId, aId);
+    const details = await GetQuestionExplains(hId, aId);
     this.setState({
-      setIsDataAvailable: true,
-      setIsFinished: true,
+      details: details,
+      question: data,
     });
   }
 
   render() {
-    const { details, isFinished } = this.state;
+    const { isFinished, details, question } = this.state;
     const { hId, aId } = this.props;
     return isFinished ? (
       <AnswerMain
         hId={hId}
         aId={aId}
-        detail={details}
+        details={details}
+        data={question}
         children={<Answer5H1 />}
       />
     ) : (

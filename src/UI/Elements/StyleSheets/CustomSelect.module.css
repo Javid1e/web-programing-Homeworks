@@ -1,27 +1,42 @@
 /* CustomSelect.module.css */
 @import url(../../Fonts/IranSans/css/fontiran.css);
-.select-container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 1rem;
+
+.customSelectRoot {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
 }
-.select-container label {
-    font-size: 1rem;
+
+.selectContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #1c1fe9;
+    border-radius: 10px;
+    padding: .3rem;
+    margin-top: .3rem;
+}
+
+.selectContainer label {
+    width: 150px;
+    float: right;
+    font-size: 15px;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    color: whitesmoke;
+    text-align: right;
 }
+
 .select {
-    font-family: IranSans, serif;
+    border: 2px solid #ea5caa;
+    background-color: whitesmoke;
+    color: #1c1fe9;
+    text-align: center;
     width: 100%;
+    border-radius: 0.4rem;
     padding: 0.5rem;
     font-size: 1rem;
-    border-radius: 0.4rem;
-    border: 2px solid #ea5caa;
     line-height: 1.5;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    cursor: pointer;
-    background-color: #fff;
 }
 
 .select:focus {
@@ -55,28 +70,18 @@
     z-index: -1;
 }
 
-.select-options {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    max-height: 150px;
-    overflow-y: auto;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-}
+@media screen and (min-width: 576px) {
+    .selectContainer {
+        flex-direction: row;
+        align-items: center;
+    }
 
-.select-option {
-    padding: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-}
+    .selectContainer label {
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
 
-.select-option:hover {
-    background-color: #0077c2;
-    color: #fff;
+    .selectContainer select {
+        width: 100%;
+    }
 }

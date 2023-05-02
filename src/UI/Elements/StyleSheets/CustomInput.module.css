@@ -1,23 +1,38 @@
+.customInputRoot {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
 .customInput {
     display: flex;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-    align-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #1c1fe9;
+    border-radius: 10px;
+    padding: .3rem;
+    margin-top: .3rem;
 }
 
 .customInput label {
-    font-size: 1rem;
+    width: 150px;
+    float: right;
+    font-size: 15px;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    color: whitesmoke;
+    text-align: right;
 }
+
 .customInput p {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
 
 }
+
 .customInput input {
     border: 2px solid #ea5caa;
+    background-color: whitesmoke;
     color: #1c1fe9;
     text-align: center;
     width: 100%;
@@ -32,6 +47,7 @@
     border-color: #80bdff;
     box-shadow: 0 0 0 0.2rem rgba(5, 5, 229, 0.25);
 }
+
 .error {
     border-color: #ff8080;
 }
@@ -41,6 +57,7 @@
     font-size: 14px;
     margin-top: 4px;
 }
+
 @media screen and (min-width: 576px) {
     .customInput {
         flex-direction: row;

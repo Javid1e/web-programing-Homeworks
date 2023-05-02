@@ -70,7 +70,6 @@ function Answer5H1() {
           setYears(car.year);
         }
       });
-      console.log(years);
       cars.map((car) => {
         if (
           !carsBrands.find(
@@ -199,7 +198,6 @@ function Answer5H1() {
       !colorError
     ) {
       if (basePrice > 0) {
-        console.log();
         setPrice(basePrice);
         switch (selectedYear) {
           case "1401":
@@ -298,7 +296,7 @@ function Answer5H1() {
           onChange={handleBodyStatusChange}
         />
         <CustomInput
-          label={"میزان کارکرد خودرو"}
+          label={"کارکرد خودرو"}
           id="km"
           min={0}
           placeholder={"مثال 345 کیلومتر"}
@@ -310,7 +308,7 @@ function Answer5H1() {
 
         <CustomInput
           id={"insurance"}
-          label={"تعداد روز باقی مانده از بیمه"}
+          label={"تعداد روز بیمه"}
           min={0}
           placeholder={"مثال 10 روز"}
           type="number"

@@ -1,6 +1,7 @@
 @import url(../../Fonts/IranSans/css/fontiran.css);
-.custom-option {
-    font-family: IranSans;
+
+.customOption {
+    font-family: IranSans, serif;
     display: block;
     padding: 0.5rem;
     font-size: 1rem;
@@ -9,17 +10,17 @@
     transition: all 0.2s ease;
 }
 
-.custom-option:hover {
+.customOption:hover {
     background-color: #f2f2f2;
 }
 
-.custom-option.selected {
+.customOption.selected {
     background-color: #007bff;
     color: #fff;
 }
 
 @media screen and (min-width: 768px) {
-    .custom-option {
+    .customOption {
         font-size: 1.2rem;
     }
 }

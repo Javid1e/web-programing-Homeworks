@@ -38,7 +38,7 @@ const Guest = () => {
       } catch (e) {
         console.log(e);
         setLoading(false);
-        setErrorLoading((prevValue) => [prevValue, e]);
+        setErrorLoading((prevValue) => [...prevValue, { e }]);
       }
     };
     fetchData().then(() => {

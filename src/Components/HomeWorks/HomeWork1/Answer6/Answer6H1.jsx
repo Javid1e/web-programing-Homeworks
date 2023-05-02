@@ -44,7 +44,7 @@ function Answer6H1() {
               <CustomInput
                 id={"city"}
                 value={city}
-                label={"نام شهر خود را انتخاب کنید"}
+                label={"نام شهر"}
                 error={cityError}
                 placeholder={"تهران"}
                 onChange={handleCityChange}

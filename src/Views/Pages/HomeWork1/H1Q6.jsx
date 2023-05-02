@@ -1,69 +1,49 @@
 import React from "react";
-import { GetHomeWorkQuestions } from "../../../Services/APIs/Details/GetHomeWorkQuestions";
 import AnswerMain from "../../Layouts/AnswerMain";
 import Answer6H1 from "../../../Components/HomeWorks/HomeWork1/Answer6/Answer6H1";
 import LoadingComponent from "../../../UI/Elements/LoadingComponent";
 import { GetQuestionExplains } from "../../../Services/APIs/Details/GetQuestionExplains";
+import { GetHomeWorkQuestion } from "../../../Services/APIs/Details/GetHomeWorkQuestion";
 
 class H1Q6 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isDataAvailable: false,
       isFinished: false,
       question: [],
-      questions: [],
       details: [],
     };
+    this.fetchData = this.fetchData.bind(this);
   }
 
   componentDidMount() {
-    this.fetchData();
+    this.fetchData().then(() => {
+      setTimeout(() => {
+        this.setState({ isFinished: true });
+      }, 1000);
+    });
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.questions !== this.state.questions) {
-      this.fetchQuestion();
-    }
-    if (prevState.question !== this.state.question) {
-      this.setIsDataAvailable();
-    }
-    if (prevState.isDataAvailable !== this.state.isDataAvailable) {
-      this.setIsFinished();
-    }
-  }
-
-  fetchData = async () => {
+  async fetchData() {
     const { hId, aId } = this.props;
-    const data = await GetHomeWorkQuestions(hId);
-    this.setState({ questions: data });
+    this.setState({ isFinished: false });
+    const data = await GetHomeWorkQuestion(hId, aId);
     const details = await GetQuestionExplains(hId, aId);
-    this.setState({ details: details.question6 });
-  };
-
-  fetchQuestion = async () => {
-    const { questions } = this.state;
-    await this.setState({ question: questions[0] });
-  };
-
-  setIsDataAvailable = () => {
-    this.setState({ isDataAvailable: true });
-  };
-
-  setIsFinished = () => {
-    setTimeout(() => {
-      this.setState({ isFinished: true });
-    }, 500);
-  };
+    this.setState({
+      details: details,
+      question: data,
+    });
+  }
 
   render() {
-    const { isFinished, details } = this.state;
+    const { isFinished, details, question } = this.state;
     const { hId, aId } = this.props;
     return isFinished ? (
       <AnswerMain
         hId={hId}
         aId={aId}
-        detail={details}
+        details={details}
+        data={question}
         children={<Answer6H1 />}
       />
     ) : (

@@ -1,47 +1,49 @@
 import React, { Component } from "react";
 import AnswerMain from "../../Layouts/AnswerMain";
 import Answer1H2 from "../../../Components/HomeWorks/HomeWork2/Answer1/Answer1H2";
-import { GetHomeWorkQuestions } from "../../../Services/APIs/Details/GetHomeWorkQuestions";
 import LoadingComponent from "../../../UI/Elements/LoadingComponent";
 import { GetQuestionExplains } from "../../../Services/APIs/Details/GetQuestionExplains";
+import { GetHomeWorkQuestion } from "../../../Services/APIs/Details/GetHomeWorkQuestion";
 
 class H2Q1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isDataAvailable: false,
       isFinished: false,
       question: [],
-      questions: [],
       details: [],
     };
     this.fetchData = this.fetchData.bind(this);
   }
 
   componentDidMount() {
-    this.fetchData();
+    this.fetchData().then(() => {
+      setTimeout(() => {
+        this.setState({ isFinished: true });
+      }, 1000);
+    });
   }
 
   async fetchData() {
     const { hId, aId } = this.props;
-    this.setState({ isDataAvailable: false, isFinished: false });
-    const data = await GetHomeWorkQuestions(hId);
+    this.setState({ isFinished: false });
+    const data = await GetHomeWorkQuestion(hId, aId);
     const details = await GetQuestionExplains(hId, aId);
     this.setState({
-      questions: data,
-      details: details.question1,
-      question: data[0],
+      details: details,
+      question: data,
     });
-    this.setState({ isDataAvailable: true, isFinished: true });
   }
 
   render() {
-    const { isFinished, details } = this.state;
+    const { isFinished, details, question } = this.state;
+    const { hId, aId } = this.props;
     return isFinished ? (
       <AnswerMain
-        hId={this.props.hId}
-        aId={this.props.aId}
-        detail={details}
+        hId={hId}
+        aId={aId}
+        details={details}
+        data={question}
         children={<Answer1H2 />}
       />
     ) : (

@@ -69,7 +69,7 @@ const Answer8H1 = (props) => {
         min={0}
         value={amount}
         placeholder={amount === "" || amount === "0" ? "مثال: 20,000,000" : ""}
-        label={"مبلغ وام ( تومان )"}
+        label={"مبلغ وام"}
         error={amountError}
         isDefault={true}
         onChange={handleAmountOnChange}
@@ -80,7 +80,7 @@ const Answer8H1 = (props) => {
         min={0}
         value={reward}
         placeholder={reward === "" || reward === "0" ? "مثال: 18" : ""}
-        label={"درصد سود سالیانه ( % )"}
+        label={"درصد سود سالیانه"}
         error={rewardError}
         onChange={handleRewardOnChange}
       />
@@ -90,30 +90,34 @@ const Answer8H1 = (props) => {
         min={0}
         value={count}
         placeholder={count === "" || count === "0" ? "مثال: 48" : ""}
-        label={"تعداد اقساط وام"}
+        label={"تعداد اقساط"}
         error={countError}
         onChange={handleCountOnChange}
       />
-      <CustomButton onClick={Computing} type={"submit"} children={"محاسبه"} className={styles.a8btn} />
+      <CustomButton
+        onClick={Computing}
+        type={"submit"}
+        children={"محاسبه"}
+        className={styles.a8btn}
+      />
       {showResult ? (
+        <Card isDefault={false}>
+          <CustomP
+            id="result"
+            isMessage={true}
+            children={`${"مبلغ هر قسط "} ${price} ${" تومان است. "}`}
+          />
+        </Card>
+      ) : (
+        error && (
           <Card isDefault={false}>
             <CustomP
-                id="result"
-                isMessage={true}
-                children={`${"مبلغ هر قسط "} ${price} ${" تومان است. "}`}
+              id="error"
+              isMessage={false}
+              children={"لطفا اطلاعات خواسته شده را تکمیل کنید."}
             />
           </Card>
-
-      ) : ( error &&
-          <Card isDefault={false}>
-            <CustomP
-                id="error"
-                isMessage={false}
-                children={"لطفا اطلاعات خواسته شده را تکمیل کنید."}
-            />
-          </Card>
-
-
+        )
       )}
     </Card>
   );
