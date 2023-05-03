@@ -46,6 +46,7 @@ function Answer6H1() {
                 value={city}
                 label={"نام شهر"}
                 error={cityError}
+                errorMessage={"انتخاب نام شهر الزامی است."}
                 placeholder={"تهران"}
                 onChange={handleCityChange}
               />

@@ -3,7 +3,7 @@ import Card from "../../../../UI/Elements/Card";
 import styles from "./Answer5.module.css";
 import CustomButton from "../../../../UI/Elements/CustomButton";
 import { FaCircle } from "react-icons/fa";
-import GetH1A5Cars from "../../../../Services/APIs/Responses/GetH1A5Cars";
+import GetH1A5Cars from "../../../../Services/APIs/Responses/GET/GetH1A5Cars";
 import CustomSelect from "../../../../UI/Elements/CustomSelect";
 import CustomInput from "../../../../UI/Elements/CustomInput";
 import CustomP from "../../../../UI/Elements/CustomP";
@@ -264,6 +264,7 @@ function Answer5H1() {
           value={selectedBrand}
           onChange={handleBrandChange}
           options={carsBrands}
+          errorMessage={"انتخاب برند خودرو الزامی است."}
         />
 
         <CustomSelect
@@ -274,6 +275,7 @@ function Answer5H1() {
           placeholder={"مدل خودرو را انتخاب کنید"}
           onChange={handleTypeChange}
           options={selectOptions}
+          errorMessage={"انتخاب مدل خودرو الزامی است."}
         />
 
         <CustomSelect
@@ -284,6 +286,7 @@ function Answer5H1() {
           value={selectedYear}
           onChange={handleYearChange}
           options={years}
+          errorMessage={"انتخاب سال تولید خودرو الزامی است."}
         />
 
         <CustomSelect
@@ -294,6 +297,7 @@ function Answer5H1() {
           value={bodyStatus}
           options={carBodyStatus}
           onChange={handleBodyStatusChange}
+          errorMessage={"انتخاب وضعیت بدنه خودرو الزامی است."}
         />
         <CustomInput
           label={"کارکرد خودرو"}
@@ -302,6 +306,7 @@ function Answer5H1() {
           placeholder={"مثال 345 کیلومتر"}
           type="number"
           error={distanceError}
+          errorMessage={"وارد کردن میزان کارکرد خودرو به کلیومتر الزامی است."}
           value={distance}
           onChange={handleDistanceChange}
         />
@@ -314,6 +319,7 @@ function Answer5H1() {
           type="number"
           value={insurance}
           error={insuranceError}
+          errorMessage={"وارد کردن تعداد روز باقی مانده از بیمه الزامی است."}
           onChange={handleInsuranceChange}
         />
 

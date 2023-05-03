@@ -5,7 +5,7 @@ import styles from "./Answer7.module.css";
 import Profiles from "./Profiles";
 import Posts from "./Posts";
 import Comments from "./Comments";
-import GetH1A7Posts from "../../../../Services/APIs/Responses/GetH1A7Posts";
+import GetH1A7PostsSocialMedia from "../../../../Services/APIs/Responses/GET/GetH1A7PostsSocialMedia";
 
 const Answer7H1 = (props) => {
   const [selectedProfile, setSelectedProfile] = useState(1);
@@ -16,7 +16,7 @@ const Answer7H1 = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await GetH1A7Posts().then((item) => {
+        await GetH1A7PostsSocialMedia().then((item) => {
           if (
             item === "Connecting To Homework1 Cars Failed,Maybe Server Is Down"
           ) {

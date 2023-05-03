@@ -3,7 +3,7 @@ import CustomButton from "../../../../UI/Elements/CustomButton";
 import Card from "../../../../UI/Elements/Card";
 import styles from "./Answer1.module.css";
 import Poem from "./Poem";
-import GetRandomPoem from "../../../../Services/APIs/Responses/GetRandomPoem";
+import GetH1A1RandomPoem from "../../../../Services/APIs/Responses/GET/GetH1A1RandomPoem";
 // This component renders a button that when clicked, fetches a random poem from the server and displays it
 const Answer1H1 = () => {
   const [fal, setFal] = useState("");
@@ -13,7 +13,7 @@ const Answer1H1 = () => {
 
   // Fetches a random poem from the server
   const randomFal = () => {
-    GetRandomPoem()
+    GetH1A1RandomPoem()
       .then((fal) => {
         if (fal === "ServerIsDown") {
           setError("اتصال با سرور برقرار نیست،لطفا سرور را راه اندازی کنید.");

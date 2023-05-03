@@ -6,10 +6,10 @@ class User {
     this.score = score;
   }
 
-  // GET method to retrieve a user by ID
+  // GET method to retrieve a user by userName
   static retrieve(userName) {
     // API call to get the user by ID and return its details
-    const userData = apiCallToGetUser(userId);
+    const userData = apiCallToGetUser(userName);
     return new UserDetails(
       userData.id,
       userData.name,

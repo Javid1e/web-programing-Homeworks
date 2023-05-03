@@ -4,7 +4,7 @@ import Card from "../../../../UI/Elements/Card";
 import styles from "./Answer4.module.css";
 import CustomInput from "../../../../UI/Elements/CustomInput";
 import CustomP from "../../../../UI/Elements/CustomP";
-import GetH1A4Tests from "../../../../Services/APIs/Responses/GetH1A4Tests";
+import GetH1A4Tests from "../../../../Services/APIs/Responses/GET/GetH1A4Tests";
 
 const Answer4H1 = () => {
   const [numQuestions, setNumQuestions] = useState(5);

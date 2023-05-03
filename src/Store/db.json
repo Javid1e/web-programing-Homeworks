@@ -2727,6 +2727,17 @@
       ]
     }
   ],
+  "homeWork1TestsHistory": [
+    {
+      "testers": [
+        {
+          "id": 1,
+          "testerName": "عبدالله محبی ",
+          "score": 20
+        }
+      ]
+    }
+  ],
   "homeWork1Cars": [
     {
       "cars": [
@@ -3241,14 +3252,6 @@
   ],
   "homeWork2Tests": [
     {
-      "history": [
-        {
-          "id": 1,
-          "name": "عبدالله محبی",
-          "usedTime": 0,
-          "score": 0
-        }
-      ],
       "tests": [
         {
           "id": 1,
@@ -3683,6 +3686,18 @@
           "correctAnswer": "78.5%",
           "degreeOfDifficulty": 5,
           "answeringTime": 25.2
+        }
+      ]
+    }
+  ],
+  "homeWork2TestsHistory": [
+    {
+      "testers": [
+        {
+          "id": 1,
+          "testerName": "عبدالله محبی ",
+          "score": 20,
+          "usedTime": 20
         }
       ]
     }

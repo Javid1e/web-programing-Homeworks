@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import CustomOption from "./CustomOption";
 import styleSheet from "./StyleSheets/CustomSelect.module.css";
 import CustomLabel from "./CustomLabel";
+import CustomP from "./CustomP";
 
 class CustomSelect extends React.Component {
   constructor(props) {
@@ -19,8 +20,16 @@ class CustomSelect extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const { id, className, children, label, error, options, ...props } =
-      this.props;
+    const {
+      id,
+      className,
+      children,
+      label,
+      error,
+      options,
+      errorMessage,
+      ...props
+    } = this.props;
     const combinedClassName = `${styleSheet.select} ${className}`;
     return (
       <div className={styleSheet.customSelectRoot}>
@@ -45,12 +54,7 @@ class CustomSelect extends React.Component {
           </select>
         </div>
         {error && (
-          <CustomLabel
-            htmlFor={id}
-            type={"AlertLabel"}
-            children={"پر کردن این فیلد الزامی است."}
-            isHeader={false}
-          />
+          <CustomP id={"error"} children={errorMessage} isMessage={false} />
         )}
       </div>
     );
@@ -62,6 +66,7 @@ CustomSelect.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   label: PropTypes.string,
+  errorMessage: PropTypes.string,
   error: PropTypes.bool,
   options: PropTypes.arrayOf(
     PropTypes.shape({

@@ -19,10 +19,11 @@ const CustomInput = ({
   readOnly,
   className,
   isDefault,
+  errorMessage,
 }) => {
   const inputStyles = error
-    ? `${styles.customInput} ${styles.error}`
-    : styles.customInput;
+    ? `${styles.customInputTag} ${styles.customInputTagError}`
+    : styles.customInputTag;
   return (
     <div className={styles.customInputRoot}>
       <div className={styles.customInput}>
@@ -48,9 +49,7 @@ const CustomInput = ({
           readOnly={readOnly}
         />
       </div>
-      {error && (
-        <CustomP isMessage={false} children={"پر کردن این فیلد الزامی است."} />
-      )}
+      {error && <CustomP isMessage={false} children={errorMessage} />}
     </div>
   );
 };
@@ -61,6 +60,7 @@ CustomInput.propTypes = {
   max: PropTypes.number,
   label: PropTypes.string,
   error: PropTypes.bool,
+  errorMessage: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
@@ -69,7 +69,7 @@ CustomInput.propTypes = {
   onFocus: PropTypes.func,
   className: PropTypes.string,
   isDefault: PropTypes.bool,
-  readOnly: PropTypes.bool
+  readOnly: PropTypes.bool,
 };
 
 CustomInput.defaultProps = {

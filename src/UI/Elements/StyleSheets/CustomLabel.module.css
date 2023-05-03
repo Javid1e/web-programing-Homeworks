@@ -1,5 +1,7 @@
 @import url(../../Fonts/YekanBakh/css/fontiran.css);
+
 .headerLabel {
+    white-space: pre-wrap;
     font-family: YekanBakh, serif;
     font-size: 1rem;
     color: #333;
@@ -7,6 +9,7 @@
 }
 
 .alertLabel {
+    white-space: pre-wrap;
     font-family: YekanBakh, serif;
     font-size: 0.9rem;
     color: #f44336;

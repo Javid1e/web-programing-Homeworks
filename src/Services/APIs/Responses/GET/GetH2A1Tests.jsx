@@ -1,8 +1,9 @@
 import axios from "axios";
+import { HOMEWORK_2_QUESTION_1_TESTS_URL } from "../../PersonalAPIConstants";
 
 async function GetH2A1Tests() {
   try {
-    const response = await axios.get(`http://localhost:3008/homeWork2Tests`);
+    const response = await axios.get(HOMEWORK_2_QUESTION_1_TESTS_URL);
     return response.data;
   } catch (error) {
     console.error(error);

@@ -71,6 +71,7 @@ const Answer8H1 = (props) => {
         placeholder={amount === "" || amount === "0" ? "مثال: 20,000,000" : ""}
         label={"مبلغ وام"}
         error={amountError}
+        errorMessage={"مشخص کردن مبلغ وام الزامی است."}
         isDefault={true}
         onChange={handleAmountOnChange}
       />
@@ -82,6 +83,7 @@ const Answer8H1 = (props) => {
         placeholder={reward === "" || reward === "0" ? "مثال: 18" : ""}
         label={"درصد سود سالیانه"}
         error={rewardError}
+        errorMessage={"مشخص کردن درصد سود سالیانه الزامی است."}
         onChange={handleRewardOnChange}
       />
       <CustomInput
@@ -92,6 +94,7 @@ const Answer8H1 = (props) => {
         placeholder={count === "" || count === "0" ? "مثال: 48" : ""}
         label={"تعداد اقساط"}
         error={countError}
+        errorMessage={"مشخص کردن تعداد اقساط الزامی است."}
         onChange={handleCountOnChange}
       />
       <CustomButton

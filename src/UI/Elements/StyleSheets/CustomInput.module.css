@@ -30,7 +30,7 @@
 
 }
 
-.customInput input {
+.customInputTag {
     border: 2px solid #ea5caa;
     background-color: whitesmoke;
     color: #1c1fe9;
@@ -43,13 +43,14 @@
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.customInput input:focus {
-    border-color: #80bdff;
+.customInputTag:focus {
+    border-color: #000102;
     box-shadow: 0 0 0 0.2rem rgba(5, 5, 229, 0.25);
 }
 
-.error {
-    border-color: #ff8080;
+.customInputTagError {
+    background-color: #f38080;
+    border: 2px solid #ff8080;
 }
 
 .errorMessage {
@@ -69,7 +70,7 @@
         margin-right: 1rem;
     }
 
-    .customInput input {
+    .customInputTag {
         width: 100%;
     }
 }

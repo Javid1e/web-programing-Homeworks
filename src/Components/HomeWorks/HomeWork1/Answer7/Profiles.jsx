@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Profiles.module.css";
-import GetH1A7Posts from "../../../../Services/APIs/Responses/GetH1A7Posts";
+import GetH1A7PostsSocialMedia from "../../../../Services/APIs/Responses/GET/GetH1A7PostsSocialMedia";
 
 function Profiles({ author }) {
   const authorImage = `https://picsum.photos/200/200?random=${author}`;
@@ -12,7 +12,7 @@ function Profiles({ author }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        await GetH1A7Posts().then((item) => {
+        await GetH1A7PostsSocialMedia().then((item) => {
           if (
             item === "Connecting To Homework1 Cars Failed,Maybe Server Is Down"
           ) {
